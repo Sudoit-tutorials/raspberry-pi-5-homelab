@@ -54,12 +54,14 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 - [ ] Konfiguracja Nginx Proxy Manager
 - [ ] Test Vaultwarden
   
-### Etap 4: Monitoring i utrzymanie  
-- [ ] Uporządkowanie backupów  
-- [ ] Monitoring usług  
-- [ ] Dokumentacja konfiguracji DNS  
-- [ ] Automatyzacja aktualizacji kontenerów  
-- [ ] Test odtwarzania danych po awarii  
+### Etap 4: Monitoring i utrzymanie
+- [ ] Uruchomienie Uptime Kuma
+- [ ] Konfiguracja monitoringu dostępności usług
+- [ ] Uruchomienie Grafany
+- [ ] Przygotowanie dashboardów w Grafanie
+- [ ] Uporządkowanie backupów
+- [ ] Automatyzacja aktualizacji kontenerów
+- [ ] Test odtwarzania danych po awarii
   
 ## Dlaczego Raspberry Pi 5?  
 
@@ -132,10 +134,35 @@ Planowane sekcje:
 - File Browser,
 - monitoring,
 - backup i odtwarzanie,
-- lokalny DNS,
-- bezpieczeństwo,
 - aktualizacje kontenerów,
-- troubleshooting.
+
+## Pliki Docker Compose
+
+Pliki Docker Compose będą przechowywane w katalogu `docker/`.
+
+Każda usługa będzie miała osobny katalog z własnym plikiem `compose.yaml`.
+
+Planowana struktura:
+
+```
+docker/
+├── portainer/
+│   └── compose.yaml
+├── nextcloud/
+│   └── compose.yaml
+├── adguard-home/
+│   └── compose.yaml
+├── nginx-proxy-manager/
+│   └── compose.yaml
+├── vaultwarden/
+│   └── compose.yaml
+├── file-browser/
+│   └── compose.yaml
+├── grafana/
+│   └── compose.yaml
+└── uptime-kuma/
+    └── compose.yaml
+```
 
 ## Bezpieczeństwo
 
