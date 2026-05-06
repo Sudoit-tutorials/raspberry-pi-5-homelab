@@ -12,8 +12,7 @@ Projekt wykorzystuje:
 - Tailscale VPN  
 - AdGuard Home  
 - Nginx Proxy Manager  
-- Vaultwarden  
-- File Browser  
+- Vaultwarden    
 - Grafana
 - Uptime Kuma
 
@@ -45,7 +44,6 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
   
 ### Etap 2: Kontenery i prywatna chmura  
 - [ ] Instalacja Dockera i Portainera
-- [ ] Instalacja File Browser
 - [ ] Uruchomienie Nextcloud
 - [ ] Konfiguracja Tailscale
   
@@ -92,7 +90,6 @@ Raspberry Pi 5
 │ ├── AdGuard Home  
 │ ├── Nginx Proxy Manager  
 │ ├── Vaultwarden  
-│ ├── File Browser  
 │ ├── Grafana  
 │ └── Uptime Kuma  
 │  
@@ -131,7 +128,6 @@ Planowane sekcje:
 - AdGuard Home,
 - Nginx Proxy Manager,
 - Vaultwarden,
-- File Browser,
 - Grafana,
 - Uptime Kuma
 - backup i odtwarzanie,
@@ -156,8 +152,6 @@ docker/
 ├── nginx-proxy-manager/
 │   └── compose.yaml
 ├── vaultwarden/
-│   └── compose.yaml
-├── file-browser/
 │   └── compose.yaml
 ├── grafana/
 │   └── compose.yaml
