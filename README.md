@@ -132,9 +132,10 @@ Planowane sekcje:
 - Nginx Proxy Manager,
 - Vaultwarden,
 - File Browser,
-- monitoring,
+- Grafana,
+- Uptime Kuma
 - backup i odtwarzanie,
-- aktualizacje kontenerów,
+- aktualizacje kontenerów
 
 ## Pliki Docker Compose
 
