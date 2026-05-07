@@ -258,7 +258,7 @@ Usługi → SMB/CIFS → Udziały
 
 Dodałem nowy udział i wskazałem wcześniej utworzony katalog współdzielony.
 
-<img src="./docs/images/openmediavault-smb-share.png" alt="Openmediavault smb share" width="600">
+<img src="images/openmediavault-smb-share.png" alt="Openmediavault smb share" width="600">
 
 Po zapisaniu zmian zatwierdziłem konfigurację w OMV.
 
