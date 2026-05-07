@@ -25,7 +25,7 @@ W tym etapie przygotowałem:
 ## Raspberry Pi 5
 Jako główną platformę wybrałem **Raspberry Pi 5**.
 
-<img src="./docs/images/raspberry-pi-5-setup.jpg" alt="Raspberry Pi 5 setup" width="600">
+<img src="images/raspberry-pi-5-setup.jpg" alt="Raspberry Pi 5 setup" width="600">
 
 To urządzenie będzie pełnić rolę małego serwera domowego. Na początku obsługuje magazyn plików, a w kolejnych etapach dojdą usługi kontenerowe, takie jak Nextcloud, AdGuard Home, Vaultwarden, Grafana i Uptime Kuma.
 
@@ -34,7 +34,7 @@ System uruchomiłem z karty microSD. Obraz przygotowałem w Raspberry Pi Imagerz
   
 Wybrałem wersję Lite, ponieważ nie potrzebuję środowiska graficznego. Raspberry Pi ma działać jako serwer, więc wystarczy lekki system bazowy dostępny przez SSH.
 
-<img src="./docs/images/raspberry-pi-os-microsd.jpg" alt="Raspberry Pi OS microSD" width="600">
+<img src="images/raspberry-pi-os-microsd.jpg" alt="Raspberry Pi OS microSD" width="600">
 
 Na nim działa system bazowy oraz OpenMediaVault. Dane użytkownika trzymam osobno, na dyskach podłączonych jako magazyn danych.
 
@@ -124,7 +124,7 @@ System → Warsztat → SSL/TLS włączony
 ```
 
 
-<img src="./docs/images/openmediavault-ssl-settings.png" alt="Openmediavault ssl settings" width="600">
+<img src="images/openmediavault-ssl-settings.png" alt="Openmediavault ssl settings" width="600">
 
 # Krok 4: Przygotowanie dysków
 
@@ -144,7 +144,7 @@ W projekcie użyłem:
 
 Po utworzeniu systemu plików zapisałem i zamontowałem go w OMV.
 
-<img src="./docs/images/openmediavault-filesystem-raid1.png" alt="Openmediavault filesystem raid1" width="600">
+<img src="images/openmediavault-filesystem-raid1.png" alt="Openmediavault filesystem raid1" width="600">
 
 ## Krótko o RAID
 
@@ -174,7 +174,7 @@ Włączyłem usługę SMB/CIFS i zostawiłem domyślną grupę roboczą:
 WORKGROUP
 ```
 
-<img src="./docs/images/openmediavault-smb-cifs-config.png" alt="Openmediavault smb cifs config" width="600">
+<img src="images/openmediavault-smb-cifs-config.png" alt="Openmediavault smb cifs config" width="600">
 
 Dzięki temu Raspberry Pi może udostępniać katalogi w sieci lokalnej w sposób widoczny dla komputerów z Windowsem.
 
@@ -194,7 +194,7 @@ Po zapisaniu ustawień zatwierdziłem zmiany w OpenMediaVault.
 
 Po przygotowaniu systemu plików i włączeniu SMB/CIFS utworzyłem katalog współdzielony.
 
-<img src="./docs/images/openmediavault-shared-folder.png" alt="Openmediavault shared folder" width="600">
+<img src="images/openmediavault-shared-folder.png" alt="Openmediavault shared folder" width="600">
 
 W OpenMediaVault przeszedłem do:
 
@@ -244,7 +244,7 @@ Magazyn → Katalogi współdzielone → Dokumenty → Lista kontroli dostępu
 
 Dla grupy `admin` ustawiłem dostęp do odczytu i zapisu. Pozostali użytkownicy nie otrzymali dostępu do tego katalogu.
 
-<img src="./docs/images/openmediavault-shared-folder-permissions.png" alt="Openmediavault shared folder permissions" width="600">
+<img src="images/openmediavault-shared-folder-permissions.png" alt="Openmediavault shared folder permissions" width="600">
 
 # Krok 8: Dodanie udziału SMB/CIFS
 
@@ -274,7 +274,7 @@ Po skonfigurowaniu SMB udział był dostępny z poziomu Windowsa po adresie IP:
 
 Windows poprosił o login i hasło. Użyłem danych użytkownika utworzonego wcześniej w OpenMediaVault.
 
-<img src="./docs/images/windows-smb-share-access.png" alt="Openmediavault smb share access" width="600">
+<img src="images/windows-smb-share-access.png" alt="Openmediavault smb share access" width="600">
 
 Po zalogowaniu mogłem kopiować pliki do udziału sieciowego tak jak do zwykłego katalogu.
 
