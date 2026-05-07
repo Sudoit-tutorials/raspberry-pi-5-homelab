@@ -37,29 +37,29 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 ## Roadmapa projektu  
   
 ### Etap 1: Podstawowa instalacja  
-- [ ] Instalacja Raspberry Pi 5
-- [ ] Instalacja OpenMediaVault
-- [ ] Konfiguracja dysków
-- [ ] Konfiguracja SMB
+✅ Instalacja Raspberry Pi 5  
+✅ Instalacja OpenMediaVault  
+✅ Konfiguracja dysków  
+✅ Konfiguracja SMB
   
 ### Etap 2: Kontenery i prywatna chmura  
-- [ ] Instalacja Dockera i Portainera
-- [ ] Uruchomienie Nextcloud
-- [ ] Konfiguracja Tailscale
+⏳ Instalacja Dockera i Portainera
+⏳ Uruchomienie Nextcloud
+⏳ Konfiguracja Tailscale
   
 ### Etap 3: Usługi sieciowe  
-- [ ] Uruchomienie AdGuard Home
-- [ ] Konfiguracja Nginx Proxy Manager
-- [ ] Test Vaultwarden
+⏳ Uruchomienie AdGuard Home
+⏳ Konfiguracja Nginx Proxy Manager
+⏳ Test Vaultwarden
   
 ### Etap 4: Monitoring i utrzymanie
-- [ ] Uruchomienie Uptime Kuma
-- [ ] Konfiguracja monitoringu dostępności usług
-- [ ] Uruchomienie Grafany
-- [ ] Przygotowanie dashboardów w Grafanie
-- [ ] Uporządkowanie backupów
-- [ ] Automatyzacja aktualizacji kontenerów
-- [ ] Test odtwarzania danych po awarii
+⏳ Uruchomienie Uptime Kuma
+⏳ Konfiguracja monitoringu dostępności usług
+⏳ Uruchomienie Grafany
+⏳ Przygotowanie dashboardów w Grafanie
+⏳ Uporządkowanie backupów
+⏳ Automatyzacja aktualizacji kontenerów
+⏳ Test odtwarzania danych po awarii
   
 ## Dlaczego Raspberry Pi 5?  
 
@@ -116,22 +116,22 @@ raspberry-pi-5-homelab/
 
 ## Dokumentacja
 
-Szczegółowa dokumentacja będzie rozwijana etapami w katalogu `docs/`.
+Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 
-Planowane sekcje:
-
-- OpenMediaVault,
-- magazyn danych i SMB,
-- Docker i Portainer,
-- Nextcloud,
-- Tailscale,
-- AdGuard Home,
-- Nginx Proxy Manager,
-- Vaultwarden,
-- Grafana,
-- Uptime Kuma
-- backup i odtwarzanie,
+- [OpenMediaVault, dyski i udział SMB](docs/01-openmediavault.md)
+- Docker i Portainer
+- Nextcloud
+- Tailscale
+- AdGuard Home
+- Nginx Proxy Manager
+- Vaultwarden
+- File Browser
+- monitoring
+- backup i odtwarzanie
+- lokalny DNS
+- bezpieczeństwo
 - aktualizacje kontenerów
+- troubleshooting
 
 ## Pliki Docker Compose
 
