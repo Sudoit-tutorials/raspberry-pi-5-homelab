@@ -34,32 +34,38 @@ Status: w trakcie budowy
   
 Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 
-## Roadmapa projektu  
-  
-### Etap 1: Podstawowa instalacja  
-✅ Instalacja Raspberry Pi 5  
-✅ Instalacja OpenMediaVault  
-✅ Konfiguracja dysków  
-✅ Konfiguracja SMB
-  
-### Etap 2: Kontenery i prywatna chmura  
-⏳ Instalacja Dockera i Portainera
-⏳ Uruchomienie Nextcloud
-⏳ Konfiguracja Tailscale
-  
-### Etap 3: Usługi sieciowe  
-⏳ Uruchomienie AdGuard Home
-⏳ Konfiguracja Nginx Proxy Manager
-⏳ Test Vaultwarden
-  
+## Roadmapa projektu
+
+### Etap 1: Podstawowa instalacja
+
+- ✅ Instalacja Raspberry Pi 5
+- ✅ Instalacja OpenMediaVault
+- ✅ Konfiguracja dysków
+- ✅ Konfiguracja SMB
+
+### Etap 2: Kontenery i prywatna chmura
+
+- ⏳ Instalacja Dockera i Portainera
+- ⏳ Instalacja File Browser
+- ⏳ Uruchomienie Nextcloud
+- ⏳ Konfiguracja Tailscale
+
+### Etap 3: Usługi sieciowe
+
+- ⏳ Uruchomienie AdGuard Home
+- ⏳ Konfiguracja Nginx Proxy Manager
+- ⏳ Test Vaultwarden
+
 ### Etap 4: Monitoring i utrzymanie
-⏳ Uruchomienie Uptime Kuma
-⏳ Konfiguracja monitoringu dostępności usług
-⏳ Uruchomienie Grafany
-⏳ Przygotowanie dashboardów w Grafanie
-⏳ Uporządkowanie backupów
-⏳ Automatyzacja aktualizacji kontenerów
-⏳ Test odtwarzania danych po awarii
+
+- ⏳ Uruchomienie Uptime Kuma
+- ⏳ Konfiguracja monitoringu dostępności usług
+- ⏳ Uruchomienie Grafany
+- ⏳ Przygotowanie dashboardów w Grafanie
+- ⏳ Uporządkowanie backupów
+- ⏳ Dokumentacja konfiguracji DNS
+- ⏳ Automatyzacja aktualizacji kontenerów
+- ⏳ Test odtwarzania danych po awarii
   
 ## Dlaczego Raspberry Pi 5?  
 
