@@ -46,7 +46,6 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 ### Etap 2: Kontenery i prywatna chmura
 
 - ⏳ Instalacja Dockera i Portainera
-- ⏳ Instalacja File Browser
 - ⏳ Uruchomienie Nextcloud
 - ⏳ Konfiguracja Tailscale
 
