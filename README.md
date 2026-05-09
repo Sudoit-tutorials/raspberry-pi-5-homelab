@@ -124,13 +124,12 @@ raspberry-pi-5-homelab/
 Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 
 - [OpenMediaVault, dyski i udział SMB](docs/01-openmediavault.md)
-- Docker i Portainer
+- [Docker i Portainer](docs/02-docker-portainer.md)
 - Nextcloud
 - Tailscale
 - AdGuard Home
 - Nginx Proxy Manager
 - Vaultwarden
-- File Browser
 - monitoring
 - backup i odtwarzanie
 - lokalny DNS
@@ -140,7 +139,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 
 ## Pliki Docker Compose
 
-Pliki Docker Compose będą przechowywane w katalogu `docker/`.
+Pliki Docker Compose będą przechowywane w katalogu [docker](docker/).
 
 Każda usługa będzie miała osobny katalog z własnym plikiem `compose.yaml`.
 
