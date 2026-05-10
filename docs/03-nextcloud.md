@@ -197,7 +197,7 @@ Po podaniu adresu aplikacja otworzyła stronę logowania Nextcloud w przeglądar
 
 Następnie wybrałem lokalny katalog na komputerze, który ma być synchronizowany z Nextcloud.
 
-<img src="images/nextcloud-desktop-client-windows.png" alt="Nextcloud Desktop client on Windows" width="900">
+<img src="images/nextcloud-desktop-client-windows.png" alt="Nextcloud Desktop client on Windows" width="400">
 
 Po zakończeniu konfiguracji wykonałem test synchronizacji:
 
