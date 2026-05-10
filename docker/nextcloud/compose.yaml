@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  db:
+    container_name: nextcloud-db
+    image: mariadb:10.11
+    platform: linux/arm64/v8
+    restart: always
+    security_opt:
+      - seccomp:unconfined
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    volumes:
+      - /srv/dev-disk-by-uuid-CHANGE_ME/docker/data/NextCloud/database:/var/lib/mysql
+    environment:
+	  - MARIADB_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}  
+	  - MARIADB_PASSWORD=${MYSQL_PASSWORD}  
+	  - MARIADB_DATABASE=${MYSQL_DATABASE}  
+	  - MARIADB_USER=${MYSQL_USER}
+
+  app:
+    image: arm64v8/nextcloud:apache
+    platform: linux/arm64/v8
+    restart: always
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - 8081:80
+    depends_on:
+      - db
+    volumes:
+      - /srv/dev-disk-by-uuid-CHANGE_ME/docker/data/NextCloud/app:/var/www/html
+      - /srv/dev-disk-by-uuid-CHANGE_ME/docker/data/NextCloud/data:/var/www/nextcloud-data
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}  
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD} 
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_HOST=db
+      - NEXTCLOUD_DATA_DIR=/var/www/nextcloud-data
