@@ -46,7 +46,7 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 ### Etap 2: Kontenery i prywatna chmura
 
 - ✅ Instalacja Dockera i Portainera
-- ⏳ Uruchomienie Nextcloud
+- ✅ Uruchomienie Nextcloud
 - ⏳ Konfiguracja Tailscale
 
 ### Etap 3: Usługi sieciowe
@@ -125,7 +125,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 
 - [OpenMediaVault, dyski i udział SMB](docs/01-openmediavault.md)
 - [Docker i Portainer](docs/02-docker-portainer.md)
-- Nextcloud
+- [Nextcloud](docs/03-nextcloud.md)
 - Tailscale
 - AdGuard Home
 - Nginx Proxy Manager
