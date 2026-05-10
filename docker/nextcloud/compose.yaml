@@ -12,10 +12,10 @@ services:
     volumes:
       - /srv/dev-disk-by-uuid-CHANGE_ME/docker/data/NextCloud/database:/var/lib/mysql
     environment:
-	  - MARIADB_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}  
-	  - MARIADB_PASSWORD=${MYSQL_PASSWORD}  
-	  - MARIADB_DATABASE=${MYSQL_DATABASE}  
-	  - MARIADB_USER=${MYSQL_USER}
+      - MARIADB_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}  
+      - MARIADB_PASSWORD=${MYSQL_PASSWORD}  
+      - MARIADB_DATABASE=${MYSQL_DATABASE}  
+      - MARIADB_USER=${MYSQL_USER}
 
   app:
     image: arm64v8/nextcloud:apache
