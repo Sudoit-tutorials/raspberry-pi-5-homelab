@@ -57,8 +57,6 @@ Na Raspberry Pi uruchomiłem instalację Tailscale, a następnie dodałem urząd
 
 W nowszych wersjach Raspberry Pi OS / Debian komenda `apt-key` może być niedostępna. W takim przypadku zamiast starszej metody z `apt-key` można użyć metody z keyringiem.
 
-Przykładowa instalacja:
-
 ```
 curl -fsSL https://pkgs.tailscale.com/stable/raspbian/bookworm.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
 
