@@ -126,7 +126,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [OpenMediaVault, dyski i udział SMB](docs/01-openmediavault.md)
 - [Docker i Portainer](docs/02-docker-portainer.md)
 - [Nextcloud](docs/03-nextcloud.md)
-- [Tailscale VPN](docs/05-tailscale.md)
+- [Tailscale VPN](docs/04-tailscale.md)
 - AdGuard Home
 - Nginx Proxy Manager
 - Vaultwarden
