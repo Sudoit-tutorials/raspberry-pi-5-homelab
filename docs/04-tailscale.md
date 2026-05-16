@@ -232,6 +232,8 @@ Dostęp był możliwy dzięki temu, że Raspberry Pi działa jako subnet router 
 
 Dodatkowo utworzyłem plik w aplikacji Nextcloud na telefonie i pojawił się on również na komputerze.
 
+<img src="images/tailscale-mobile-nextcloud-test.jpg" alt="nextcloud access from phone through Tailscale" width="400">
+
 Ten test potwierdził, że z usług homelabowych mogę korzystać również z telefonu, bez wystawiania Nextcloud bezpośrednio do internetu.
 
 ## Podsumowanie
