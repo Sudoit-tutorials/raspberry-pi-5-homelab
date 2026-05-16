@@ -176,7 +176,7 @@ Tam zatwierdziłem trasę:
 192.168.0.0/24
 ```
 
-<img src="images/tailscale-subnet-routes.png" alt="Tailscale subnet routes" width="900">
+<img src="images/tailscale-subnet-routes.png" alt="Tailscale subnet routes" width="600">
 
 Po zatwierdzeniu trasy Raspberry Pi zaczęło działać jako brama do sieci lokalnej dla urządzeń połączonych przez Tailscale.
 
@@ -204,7 +204,7 @@ Dla komputera osobistego nie jest to duży problem, ale dla małego serwera domo
 
 W panelu Tailscale przeszedłem do urządzenia Raspberry Pi i wybrałem opcję wyłączenia wygasania klucza.
 
-<img src="images/tailscale-disable-key-expiry.png" alt="Tailscale disable key expiry" width="900">
+<img src="images/tailscale-disable-key-expiry.png" alt="Tailscale disable key expiry" width="600">
 
 Dzięki temu Raspberry Pi nie powinno wymagać ponownego logowania po upływie standardowego czasu ważności klucza.
 
