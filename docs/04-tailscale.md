@@ -228,7 +228,7 @@ https://192.168.0.100:9443
 
 Dostęp był możliwy dzięki temu, że Raspberry Pi działa jako subnet router i udostępnia przez Tailscale trasę do sieci lokalnej.
 
-<img src="images/tailscale-mobile-nextcloud-test.jpg" alt="Nextcloud access from phone through Tailscale" width="400">
+<img src="images/tailscale-mobile-portainer-test.jpg" alt="portainer access from phone through Tailscale" width="400">
 
 Dodatkowo utworzyłem plik w aplikacji Nextcloud na telefonie i pojawił się on również na komputerze.
 
