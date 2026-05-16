@@ -208,6 +208,32 @@ W panelu Tailscale przeszedłem do urządzenia Raspberry Pi i wybrałem opcję w
 
 Dzięki temu Raspberry Pi nie powinno wymagać ponownego logowania po upływie standardowego czasu ważności klucza.
 
+## Krok 7: Dodanie telefonu do Tailscale i test mobilny  
+  
+Po przetestowaniu dostępu z komputera dodałem do tailneta również telefon.  
+  
+Na telefonie zainstalowałem aplikację Tailscale, zalogowałem się na to samo konto i włączyłem połączenie VPN.
+
+<img src="images/tailscale-mobile-app-connected.jpg" alt="Tailscale mobile app connected" width="400">
+
+Po chwili telefon pojawił się w panelu Tailscale w sekcji **"Machines"**.
+
+Następnie wyłączyłem Wi-Fi i przetestowałem dostęp przez sieć komórkową.
+
+W przeglądarce na telefonie otworzyłem Portainer po lokalnym adresie Raspberry Pi:
+
+```
+https://192.168.0.100:9443
+```
+
+Dostęp był możliwy dzięki temu, że Raspberry Pi działa jako subnet router i udostępnia przez Tailscale trasę do sieci lokalnej.
+
+<img src="images/tailscale-mobile-nextcloud-test.jpg" alt="Nextcloud access from phone through Tailscale" width="400">
+
+Dodatkowo utworzyłem plik w aplikacji Nextcloud na telefonie i pojawił się on również na komputerze.
+
+Ten test potwierdził, że z usług homelabowych mogę korzystać również z telefonu, bez wystawiania Nextcloud bezpośrednio do internetu.
+
 ## Podsumowanie
 
 Tailscale jest ważnym elementem tego projektu, bo pozwala połączyć wygodę dostępu zdalnego z ograniczeniem publicznej ekspozycji usług.
