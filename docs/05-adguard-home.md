@@ -137,7 +137,7 @@ http://ADRES_IP_RASPBERRY_PI:3000
 
 Przy pierwszym wejściu AdGuard Home wyświetla kreator konfiguracji.
 
-<img src="images/adguard-home-first-run.png" alt="AdGuard Home first run network configuration" width="700">
+<img src="images/adguard-home-first-run.png" alt="AdGuard Home first run network configuration" width="400">
 
 W kreatorze można ustawić między innymi:
 
