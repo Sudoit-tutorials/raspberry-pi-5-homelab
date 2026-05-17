@@ -49,11 +49,11 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 - ✅ Uruchomienie Nextcloud
 - ✅ Konfiguracja Tailscale
 
-### Etap 3: Usługi sieciowe
+### Etap 3: Usługi sieciowe i narzędzia
 
-- ⏳ Uruchomienie AdGuard Home
+- ✅ Uruchomienie AdGuard Home
 - ⏳ Konfiguracja Nginx Proxy Manager
-- ⏳ Test Vaultwarden
+- ⏳ Uruchomienie Vaultwarden
 
 ### Etap 4: Monitoring i utrzymanie
 
@@ -127,7 +127,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [Docker i Portainer](docs/02-docker-portainer.md)
 - [Nextcloud](docs/03-nextcloud.md)
 - [Tailscale VPN](docs/04-tailscale.md)
-- AdGuard Home
+- [AdGuard Home](docs/06-adguard-home.md)
 - Nginx Proxy Manager
 - Vaultwarden
 - monitoring
