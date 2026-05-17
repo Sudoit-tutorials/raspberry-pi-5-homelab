@@ -127,7 +127,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [Docker i Portainer](docs/02-docker-portainer.md)
 - [Nextcloud](docs/03-nextcloud.md)
 - [Tailscale VPN](docs/04-tailscale.md)
-- [AdGuard Home](docs/06-adguard-home.md)
+- [AdGuard Home](docs/05-adguard-home.md)
 - Nginx Proxy Manager
 - Vaultwarden
 - monitoring
