@@ -155,7 +155,7 @@ na właściwy identyfikator dysku widoczny w OpenMediaVault.
 
 ## Krok 4: Dostęp do panelu Nginx Proxy Manager
 
-<img src="images/nginx-proxy-manager-login.png" alt="Nginx Proxy Manager login" width="900">
+<img src="images/nginx-proxy-manager-login.png" alt="Nginx Proxy Manager login" width="400">
 
 Po uruchomieniu kontenera panel administracyjny Nginx Proxy Managera był dostępny pod adresem:
 
@@ -167,7 +167,7 @@ Po pierwszym logowaniu należy zmienić domyślne dane administratora.
 
 Domyślny panel Nginx Proxy Managera służy do tworzenia proxy hostów, zarządzania certyfikatami i przekierowywania ruchu do usług działających na Raspberry Pi.
 
-<img src="images/nginx-proxy-manager-dashboard.png" alt="Nginx Proxy Manager dashboard" width="900">
+<img src="images/nginx-proxy-manager-dashboard.png" alt="Nginx Proxy Manager dashboard" width="600">
 
 ## Krok 5: Dodanie pierwszego proxy hosta
 
@@ -188,7 +188,7 @@ http://nextcloud.lumiere.local
 
 powinno kierować do Nextcloud.
 
-<img src="images/nginx-proxy-manager-nextcloud-proxy-host.png" alt="Nginx Proxy Manager Nextcloud proxy host" width="900">
+<img src="images/nginx-proxy-manager-nextcloud-proxy-host.png" alt="Nginx Proxy Manager Nextcloud proxy host" width="400">
 
 Warunkiem jest poprawne rozwiązanie nazwy DNS. W tym projekcie odpowiada za to AdGuard Home, gdzie wcześniej dodałem przepisywanie DNS:
 
@@ -281,9 +281,9 @@ Po zapisaniu konfiguracji panel Nginx był dostępny pod adresem:
 http://nginx.lumiere.local
 ```
 
-<img src="images/nginx-proxy-manager-proxy-hosts-list.png" alt="Nginx Proxy Manager proxy hosts list" width="900">
-
 Po dodaniu proxy hostów w panelu Nginx Proxy Manager widać cztery lokalne domeny: `adguard.lumiere.local`, `nextcloud.lumiere.local`, `portainer.lumiere.local` oraz `nginx.lumiere.local`. Każda z nich kieruje na odpowiednią usługę działającą na Raspberry Pi.
+
+<img src="images/nginx-proxy-manager-proxy-hosts-list.png" alt="Nginx Proxy Manager proxy hosts list" width="700">
 
 ## Krok 7: Lokalny certyfikat wildcard
 
@@ -301,7 +301,7 @@ openssl req -x509 -newkey ec -pkeyopt ec_paramgen_curve:prime256v1 -nodes -days 
 
 Taki certyfikat można dodać w Nginx Proxy Managerze i wykorzystać dla lokalnych usług.
 
-<img src="images/nginx-proxy-manager-custom-certificate.png" alt="Nginx Proxy Manager custom certificate" width="700">
+<img src="images/nginx-proxy-manager-custom-certificate.png" alt="Nginx Proxy Manager custom certificate" width="500">
 
 Po dodaniu certyfikatu samopodpisanego w Nginx Proxy Managerze przypisałem go do lokalnych proxy hostów.
 
@@ -331,7 +331,7 @@ HSTS Enabled
 HSTS Sub-domains
 ```
 
-<img src="images/nginx-proxy-manager-proxy-host-ssl.png" alt="Nginx Proxy Manager proxy host SSL settings" width="900">
+<img src="images/nginx-proxy-manager-proxy-host-ssl.png" alt="Nginx Proxy Manager proxy host SSL settings" width="500">
 
 Po zapisaniu konfiguracji usługa może być dostępna przez HTTPS, np.:
 
