@@ -52,7 +52,7 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 ### Etap 3: Usługi sieciowe i narzędzia
 
 - ✅ Uruchomienie AdGuard Home
-- ⏳ Konfiguracja Nginx Proxy Manager
+- ✅ Konfiguracja Nginx Proxy Manager
 - ⏳ Uruchomienie Vaultwarden
 
 ### Etap 4: Monitoring i utrzymanie
@@ -112,8 +112,6 @@ Docelowo repozytorium będzie podzielone na dokumentację, pliki Docker Compose 
 ```
 raspberry-pi-5-homelab/
 ├── README.md
-├── .gitignore
-├── .env.example
 ├── docs/
 ├── docker/
 └── scripts/
@@ -128,7 +126,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [Nextcloud](docs/03-nextcloud.md)
 - [Tailscale VPN](docs/04-tailscale.md)
 - [AdGuard Home](docs/05-adguard-home.md)
-- Nginx Proxy Manager
+- [Nginx Proxy Manager](docs/06-nginx-proxy-manager.md)
 - Vaultwarden
 - monitoring
 - backup i odtwarzanie
