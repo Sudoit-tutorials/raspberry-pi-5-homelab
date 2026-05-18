@@ -115,7 +115,7 @@ W polu edycji stacka wkleiłem zawartość pliku Compose przygotowanego dla AdGu
 
 Właściwy plik Compose znajduje się tutaj:
 
-AdGuard Home compose.yaml
+[Adguard compose.yaml](../docker/adguard-home/compose.yaml)
 
 W pliku Compose trzeba podmienić:
 
