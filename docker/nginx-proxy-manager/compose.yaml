@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nginx-proxy-manager:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    platform: linux/arm64
+    restart: unless-stopped
+    security_opt:
+      - seccomp=unconfined
+    ports:
+      - "80:80"
+      - "443:443"
+      - "81:81"
+    volumes:
+      - /srv/dev-disk-by-uuid-CHANGE_ME/docker/data/nginx-proxy-manager/data:/data
+      - /srv/dev-disk-by-uuid-CHANGE_ME/docker/data/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
