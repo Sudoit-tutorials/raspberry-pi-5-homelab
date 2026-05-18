@@ -108,7 +108,7 @@ W polu edycji stacka wkleiłem zawartość pliku Compose przygotowanego dla Next
 
 Właściwy plik Compose znajduje się tutaj:
 
-Nextcloud compose.yaml
+[Nextcloud compose.yaml](../nextcloud/compose.yaml)
 
 W pliku Compose trzeba podmienić:
 
