@@ -317,7 +317,7 @@ cadvisor
 
 Przy każdym z nich widnieje status up, co oznacza, że Prometheus poprawnie zbiera metryki:
 
-<img src="images/prometheus-targets.png" alt="Prometheus targets" width="500">
+<img src="images/prometheus-targets.png" alt="Prometheus targets" width="800">
 
 ## Krok 6: Test zapytań w Prometheusie
 
@@ -343,7 +343,7 @@ container_cpu_usage_seconds_total
 
 Prometheus zwraca wyniki, co oznacza, że metryki są poprawnie pobierane.
 
-<img src="images/prometheus-query-node-exporter.png" alt="Prometheus query node exporter" width="600">
+<img src="images/prometheus-query-node-exporter.png" alt="Prometheus query node exporter" width="800">
 
 ## Krok 7: Dostęp do Grafany
 
@@ -357,7 +357,7 @@ Port `3001` został użyty po stronie Raspberry Pi, ponieważ port `3000` jest j
 
 Po pierwszym wejściu zalogowałem się do Grafany i zmieniłem domyślne hasło administratora.
 
-<img src="images/grafana-login.png" alt="Grafana login" width="700">
+<img src="images/grafana-login.png" alt="Grafana login" width="800">
 
 ## Krok 8: Dodanie Prometheusa jako źródła danych w Grafanie
 
@@ -403,7 +403,7 @@ http://prometheus:9090
 
 Po zapisaniu konfiguracji kliknąłem test połączenia.
 
-<img src="images/grafana-prometheus-data-source.png" alt="Grafana Prometheus data source" width="700">
+<img src="images/grafana-prometheus-data-source.png" alt="Grafana Prometheus data source" width="800">
 
 W moim przypadku połączenie przebiegło bez problemów.
 
@@ -439,7 +439,7 @@ Prometheus
 
 i zaimportowałem dashboard.
 
-<img src="images/grafana-raspberry-pi-dashboard.png" alt="Grafana Raspberry Pi dashboard" width="700">
+<img src="images/grafana-raspberry-pi-dashboard.png" alt="Grafana Raspberry Pi dashboard" width="800">
 
 Dashboard Raspberry Pi pokazuje między innymi:
 
@@ -649,7 +649,7 @@ Prometheus działa lokalnie na porcie `9090`.
 
 Po dodaniu proxy hostów przypisałem do nich również lokalny certyfikat wildcard przygotowany wcześniej dla domeny.
 
-<img src="images/nginx-proxy-manager-monitoring-proxy-hosts.png" alt="Nginx Proxy Manager monitoring proxy hosts" width="500">
+<img src="images/nginx-proxy-manager-monitoring-proxy-hosts.png" alt="Nginx Proxy Manager monitoring proxy hosts" width="800">
 
 ## Troubleshooting: Prometheus i Grafana restartują się przez uprawnienia  
   
