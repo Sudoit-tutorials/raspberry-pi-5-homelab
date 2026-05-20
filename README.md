@@ -56,13 +56,13 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 
 ### Etap 4: Monitoring
 
-- ⏳ Uruchomienie Prometheus
-- ⏳ Uruchomienie Node Exporter
-- ⏳ Uruchomienie cAdvisor
-- ⏳ Uruchomienie Grafany
-- ⏳ Dodanie Prometheusa jako źródła danych w Grafanie
-- ⏳ Przygotowanie dashboardu dla Raspberry Pi
-- ⏳ Przygotowanie dashboardu dla kontenerów Docker
+- ✅ Uruchomienie Prometheus
+- ✅ Uruchomienie Node Exporter
+- ✅ Uruchomienie cAdvisor
+- ✅ Uruchomienie Grafany
+- ✅ Dodanie Prometheusa jako źródła danych w Grafanie
+- ✅ Przygotowanie dashboardu dla Raspberry Pi
+- ✅ Przygotowanie dashboardu dla kontenerów Docker
 - ⏳ Uruchomienie Uptime Kuma
 - ⏳ Dodanie monitorów dostępności usług
 
@@ -162,7 +162,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [Tailscale VPN](docs/04-tailscale.md)
 - [AdGuard Home](docs/05-adguard-home.md)
 - [Nginx Proxy Manager](docs/06-nginx-proxy-manager.md)
-- Monitoring metryk: Prometheus i Grafana
+- [Monitoring metryk: Prometheus i Grafana](docs/07-prometheus-grafana.md)
 - Monitoring dostępności: Uptime Kuma
 - backup i odtwarzanie
 - Automatyzacja z Ansible
