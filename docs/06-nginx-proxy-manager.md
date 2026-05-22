@@ -357,7 +357,7 @@ Po dodaniu certyfikatu do proxy hosta sprawdziłem działanie w przeglądarce. P
 https://nextcloud.lumiere.local
 ```
 
-## Troubleshooting: problem z aplikacją Nextcloud Desktop / Mobile po przejściu na HTTPS
+## Krok 9: Troubleshooting: problem z aplikacją Nextcloud Desktop / Mobile po przejściu na HTTPS
 
 Po dodaniu Nextcloud do Nginx Proxy Managera i uruchomieniu dostępu przez lokalną domenę HTTPS:
 
