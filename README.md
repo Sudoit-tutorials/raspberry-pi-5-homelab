@@ -63,8 +63,8 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 - ✅ Dodanie Prometheusa jako źródła danych w Grafanie
 - ✅ Przygotowanie dashboardu dla Raspberry Pi
 - ✅ Przygotowanie dashboardu dla kontenerów Docker
-- ⏳ Uruchomienie Uptime Kuma
-- ⏳ Dodanie monitorów dostępności usług
+- ✅ Uruchomienie Uptime Kuma
+- ✅ Dodanie monitorów dostępności usług
 
 ### Etap 5: Backup i utrzymanie
 
@@ -163,7 +163,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [AdGuard Home](docs/05-adguard-home.md)
 - [Nginx Proxy Manager](docs/06-nginx-proxy-manager.md)
 - [Monitoring metryk: Prometheus i Grafana](docs/07-prometheus-grafana.md)
-- Monitoring dostępności: Uptime Kuma
+- [Monitoring dostępności: Uptime Kuma](docs/08-uptime-kuma.md)
 - backup i odtwarzanie
 - Automatyzacja z Ansible
 
