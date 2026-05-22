@@ -357,6 +357,45 @@ Po dodaniu certyfikatu do proxy hosta sprawdziłem działanie w przeglądarce. P
 https://nextcloud.lumiere.local
 ```
 
+## Troubleshooting: problem z aplikacją Nextcloud Desktop / Mobile po przejściu na HTTPS
+
+Po dodaniu Nextcloud do Nginx Proxy Managera i uruchomieniu dostępu przez lokalną domenę HTTPS:
+
+```
+https://nextcloud.lumiere.local
+```
+
+pojawił się problem z aplikacją Nextcloud Desktop / Mobile.
+
+W przeglądarce Nextcloud był dostępny poprawnie, ale aplikacja kliencka miała problem z połączeniem albo próbowała odwoływać się do nieprawidłowego adresu/protokołu.
+
+Problem wynikał z tego, że Nextcloud działa w kontenerze lokalnie po HTTP, natomiast z zewnątrz korzystam z HTTPS przez Nginx Proxy Manager.
+
+W takiej sytuacji Nextcloud powinien wiedzieć, jaki jest docelowy adres oraz protokół używany przez użytkownika.
+
+Rozwiązaniem było dodanie w pliku konfiguracyjnym Nextcloud informacji o adresie i protokole.
+
+Plik konfiguracyjny znajduje się w kontenerze w lokalizacji:
+
+```
+/srv/dev-disk-by-uuid-CHANGE_ME/docker/Dane/NextCloud/Nextcloud_Application/config/config.php
+```
+
+Do konfiguracji dodałem wpis:
+```
+'overwriteprotocol' => 'https',
+```
+
+Po zapisaniu zmian zrestartowałem kontener Nextcloud:
+
+sudo docker restart nextcloud-app-1
+
+Po tej zmianie aplikacja Nextcloud poprawnie korzystała z adresu HTTPS:
+
+```
+https://nextcloud.lumiere.local
+```
+
 ## Krok 10: Integracja z Tailscale
 
 Nginx Proxy Manager można połączyć z Tailscale, żeby korzystać z nazw usług również poza siecią lokalną.
