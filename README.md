@@ -169,7 +169,6 @@ raspberry-pi-5-homelab/
 ├── README.md
 ├── docs/
 ├── docker/
-└── scripts/
 └── backup/
 └── ansible/
 ```
