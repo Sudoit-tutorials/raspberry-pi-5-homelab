@@ -271,7 +271,35 @@ Ten test potwierdził, że monitoring dostępności działa poprawnie i wykrywa 
 
 <img src="images/uptime-kuma-incident-test2.png" alt="Uptime Kuma incident test" width="900">
 
-## Krok 9: Dostęp przez Nginx Proxy Manager
+## Krok 9: Powiadomienia mailowe  
+  
+Po dodaniu monitorów skonfigurowałem również powiadomienia mailowe w Uptime Kuma.  
+  
+Dzięki temu Uptime Kuma nie tylko pokazuje status usług w panelu, ale również wysyła informację, gdy któraś z usług przestanie odpowiadać.  
+  
+W Uptime Kuma przeszedłem do:  
+  
+```text  
+Settings → Notifications → Setup Notification
+```
+
+Jako typ powiadomienia wybrałem:
+
+```
+SMTP
+```
+
+Następnie skonfigurowałem dane serwera pocztowego, adres nadawcy oraz adres odbiorcy.
+
+Po zapisaniu konfiguracji wykonałem test powiadomienia, a następnie przypisałem powiadomienie do wybranych monitorów.
+
+W ramach testu zatrzymałem kontener Nextcloud i po 5min uruchomiłem go ponownie.
+
+Uptime Kuma wykryła zmianę statusu usługi i wysłała powiadomienie mailowe. Po ponownym uruchomieniu kontenera otrzymałem kolejną informację o powrocie usługi do stanu `Up`.
+
+<img src="images/uptime_mail_notification.png" alt="Uptime mail notification" width="900">
+
+## Krok 10: Dostęp przez Nginx Proxy Manager
 
 Po uruchomieniu Uptime Kuma dodałem dla niego lokalną nazwę w Nginx Proxy Managerze.
 
@@ -294,7 +322,7 @@ https://uptime.lumiere.local
 
 Do proxy hosta przypisałem również lokalny certyfikat wildcard dla domeny.
 
-## Krok 10: Strona statusów homelaba  
+## Krok 11: Strona statusów homelaba  
   
 Na koniec przygotowałem również stronę statusów w Uptime Kuma.  
   
