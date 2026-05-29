@@ -72,7 +72,7 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 - ✅ Inicjalizacja repozytorium Restic w chmurze
 - ✅ Testowy backup małego katalogu
 - ✅ Test odtwarzania danych
-- ✅ Backup katalogu docker/data
+- ✅ Backup katalogu `docker/data`
 - ✅ Dump bazy MariaDB dla Nextcloud
 - ✅ Skrypt backupowy
 - ✅ Automatyzacja przez systemd timer
@@ -87,7 +87,7 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 - ⏳ Tworzenie katalogu `docker`  
 - ⏳ Tworzenie katalogu `docker/data`  
 - ⏳ Tworzenie katalogów dla stacków Docker Compose  
-- ⏳ Kopiowanie plików `compose.yaml`  
+- ⏳ Kopiowanie plików `compose.yaml`
 - ⏳ Kopiowanie konfiguracji Prometheusa  
 - ⏳ Ustawianie uprawnień katalogów aplikacji  
 - ⏳ Instalacja Restic i rclone  
