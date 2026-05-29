@@ -146,10 +146,12 @@ Raspberry Pi 5
 │   ├── Grafana
 │   └── Uptime Kuma
 │
-├── Backup i utrzymanie
-│   ├── backup danych
-│   ├── aktualizacje kontenerów
-│   └── test odtwarzania po awarii
+├── Backup i odtwarzanie
+│   ├── Restic
+│   ├── rclone
+│   ├── dump bazy MariaDB dla Nextcloud
+│   ├── systemd timer
+│   └── test odtwarzania danych do osobnego katalogu
 │
 └── Ansible
     ├── automatyzacja konfiguracji
@@ -168,6 +170,8 @@ raspberry-pi-5-homelab/
 ├── docs/
 ├── docker/
 └── scripts/
+└── backup/
+└── ansible/
 ```
 
 ## Dokumentacja
