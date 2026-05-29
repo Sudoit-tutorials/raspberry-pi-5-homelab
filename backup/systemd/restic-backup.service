@@ -1,0 +1,8 @@
+[Unit]
+Description=Homelab Restic backup
+
+[Service]
+Type=oneshot
+Environment=HOME=/root
+Environment=XDG_CACHE_HOME=/root/.cache
+ExecStart=/opt/homelab-backup/backup-homelab.sh
