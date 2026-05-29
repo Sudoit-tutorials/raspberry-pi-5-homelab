@@ -68,13 +68,14 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 
 ### Etap 5: Backup i utrzymanie
 
-- ⏳ Uporządkowanie backupów
-- ⏳ Backup danych Nextcloud
-- ⏳ Backup konfiguracji AdGuard Home
-- ⏳ Backup konfiguracji Nginx Proxy Manager
-- ⏳ Backup danych Grafany i Prometheusa
-- ⏳ Automatyzacja aktualizacji kontenerów
-- ⏳ Test odtwarzania danych po awarii
+- ✅ Konfiguracja rclone z Google Drive
+- ✅ Inicjalizacja repozytorium Restic w chmurze
+- ✅ Testowy backup małego katalogu
+- ✅ Test odtwarzania danych
+- ✅ Backup katalogu docker/data
+- ✅ Dump bazy MariaDB dla Nextcloud
+- ✅ Skrypt backupowy
+- ✅ Automatyzacja przez systemd timer
 
 ### Etap 6: Automatyzacja z Ansible
 
@@ -164,7 +165,7 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [Nginx Proxy Manager](docs/06-nginx-proxy-manager.md)
 - [Monitoring metryk: Prometheus i Grafana](docs/07-prometheus-grafana.md)
 - [Monitoring dostępności: Uptime Kuma](docs/08-uptime-kuma.md)
-- backup i odtwarzanie
+- [backup i odtwarzanie](docs/09-restic-backup.md)
 - Automatyzacja z Ansible
 
 ## Pliki Docker Compose
