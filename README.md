@@ -4,17 +4,25 @@ Projekt domowego środowiska typu **NAS + self-hosted lab** opartego na **Raspbe
   
 Celem projektu jest zbudowanie lekkiej alternatywy dla dużych systemów NAS, takich jak TrueNAS Scale. Nie chodzi o budowę serwera klasy enterprise, tylko o praktyczne, energooszczędne środowisko do przechowywania plików, uruchamiania usług kontenerowych i nauki administracji systemami.
 
-Projekt wykorzystuje:  
-- Raspberry Pi 5  
-- OpenMediaVault  
-- Docker / Portainer  
-- Nextcloud  
-- Tailscale VPN  
-- AdGuard Home  
-- Nginx Proxy Manager  
-- Grafana
-- Uptime Kuma
-- Prometheus
+Projekt wykorzystuje:
+
+- **Raspberry Pi 5** jako bazę homelaba
+- **OpenMediaVault** do obsługi dysków, udziałów SMB i katalogów pod usługi
+- **Docker / Docker Compose** do uruchamiania usług kontenerowych
+- **Portainer** do wygodnego zarządzania kontenerami
+- **Nextcloud** jako prywatną chmurę plików
+- **Tailscale VPN** do bezpiecznego dostępu zdalnego
+- **AdGuard Home** jako lokalny DNS, dziennik zapytań i filtr domen
+- **Nginx Proxy Manager** jako reverse proxy dla usług lokalnych
+- **Prometheus** do zbierania metryk
+- **Node Exporter** do monitorowania Raspberry Pi
+- **cAdvisor** do monitorowania kontenerów Docker
+- **Grafana** do wizualizacji metryk i dashboardów
+- **Uptime Kuma** do monitorowania dostępności usług
+- **Restic** do tworzenia szyfrowanych backupów
+- **rclone** do zapisu backupów w chmurze
+- **systemd timer** do automatycznego uruchamiania backupu
+- **Ansible** do automatyzacji przygotowania środowiska
 
 ## Cel projektu  
 
