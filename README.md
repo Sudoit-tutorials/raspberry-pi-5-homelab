@@ -77,14 +77,23 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 - ✅ Skrypt backupowy
 - ✅ Automatyzacja przez systemd timer
 
-### Etap 6: Automatyzacja z Ansible
-
-- ⏳ Przygotowanie inventory Ansible
-- ⏳ Test połączenia z Raspberry Pi
-- ⏳ Tworzenie katalogów Dockera przez playbook
-- ⏳ Ustawianie uprawnień katalogów aplikacji
-- ⏳ Kopiowanie plików Docker Compose
-- ⏳ Przygotowanie środowiska pod odtworzenie po reinstalacji
+### Etap 6: Automatyzacja z Ansible  
+  
+- ⏳ Przygotowanie struktury katalogów Ansible  
+- ⏳ Przygotowanie inventory dla Raspberry Pi  
+- ⏳ Test połączenia z Raspberry Pi przez Ansible  
+- ⏳ Instalacja podstawowych pakietów  
+- ⏳ Instalacja Dockera i Docker Compose  
+- ⏳ Tworzenie katalogu `docker`  
+- ⏳ Tworzenie katalogu `docker/data`  
+- ⏳ Tworzenie katalogów dla stacków Docker Compose  
+- ⏳ Kopiowanie plików `compose.yaml`  
+- ⏳ Kopiowanie konfiguracji Prometheusa  
+- ⏳ Ustawianie uprawnień katalogów aplikacji  
+- ⏳ Instalacja Restic i rclone  
+- ⏳ Kopiowanie skryptu backupowego  
+- ⏳ Kopiowanie plików systemd service/timer  
+- ⏳ Włączenie systemd timer przez Ansible  
   
 ## Dlaczego Raspberry Pi 5?  
 
