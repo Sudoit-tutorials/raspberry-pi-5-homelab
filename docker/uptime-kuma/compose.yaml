@@ -5,15 +5,5 @@ services:
     restart: unless-stopped
     ports:
       - "3002:3001"
-    dns:
-      - 172.30.0.1
-      - 1.1.1.1
     volumes:
       - /srv/dev-disk-by-uuid-CHANGE_ME/docker/data/uptime-kuma/data:/app/data
-
-networks:
-  default:
-    ipam:
-      config:
-        - subnet: 172.30.0.0/16
-          gateway: 172.30.0.1
