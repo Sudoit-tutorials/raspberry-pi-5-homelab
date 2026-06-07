@@ -1,0 +1,36 @@
+- name: Disable systemd-resolved for AdGuard Home
+  hosts: homelab
+  become: true
+
+  tasks:
+    - name: Check if systemd-resolved service exists
+      ansible.builtin.stat:
+        path: /lib/systemd/system/systemd-resolved.service
+      register: systemd_resolved_service
+
+    - name: Stop systemd-resolved
+      ansible.builtin.systemd:
+        name: systemd-resolved
+        state: stopped
+      when: systemd_resolved_service.stat.exists
+
+    - name: Disable systemd-resolved
+      ansible.builtin.systemd:
+        name: systemd-resolved
+        enabled: false
+      when: systemd_resolved_service.stat.exists
+
+    - name: Remove existing resolv.conf symlink
+      ansible.builtin.file:
+        path: /etc/resolv.conf
+        state: absent
+
+    - name: Create static resolv.conf
+      ansible.builtin.copy:
+        dest: /etc/resolv.conf
+        content: |
+          nameserver 1.1.1.1
+          nameserver 8.8.8.8
+        owner: root
+        group: root
+        mode: "0644"
