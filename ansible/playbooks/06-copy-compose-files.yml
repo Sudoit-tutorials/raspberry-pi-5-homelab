@@ -1,0 +1,32 @@
+- name: Copy Docker Compose files
+  hosts: homelab
+  become: true
+
+  tasks:
+    - name: Copy compose files
+      ansible.builtin.copy:
+        src: "../../docker/{{ item }}/compose.yaml"
+        dest: "{{ docker_base_path }}/{{ item }}/compose.yaml"
+        owner: root
+        group: root
+        mode: "0644"
+      loop: "{{ docker_services }}"
+
+    - name: Copy Prometheus configuration
+      ansible.builtin.copy:
+        src: "../../docker/prometheus-grafana/prometheus.yml"
+        dest: "{{ docker_base_path }}/prometheus-grafana/prometheus.yml"
+        owner: root
+        group: root
+        mode: "0644"
+
+    - name: Create stack env files
+      ansible.builtin.copy:
+        dest: "{{ docker_base_path }}/{{ item }}/.env"
+        content: |
+          DOCKER_BASE_PATH={{ docker_base_path }}
+          DOCKER_DATA_PATH={{ docker_data_path }}
+        owner: root
+        group: root
+        mode: "0644"
+      loop: "{{ docker_services }}"
