@@ -1,0 +1,22 @@
+disk_uuid: "CHANGE_ME"
+
+docker_base_path: "/srv/dev-disk-by-uuid-{{ disk_uuid }}/docker"
+docker_data_path: "{{ docker_base_path }}/data"
+
+docker_services:
+  - portainer
+  - nextcloud
+  - adguard-home
+  - nginx-proxy-manager
+  - prometheus-grafana
+  - uptime-kuma
+
+backup_scripts_path: "/opt/homelab-backup"
+
+backup_script_src: "../../backup/scripts/backup-homelab.sh"
+backup_service_src: "../../backup/systemd/restic-backup.service"
+backup_timer_src: "../../backup/systemd/restic-backup.timer"
+
+backup_script_dest: "{{ backup_scripts_path }}/backup-homelab.sh"
+backup_service_dest: "/etc/systemd/system/restic-backup.service"
+backup_timer_dest: "/etc/systemd/system/restic-backup.timer"
