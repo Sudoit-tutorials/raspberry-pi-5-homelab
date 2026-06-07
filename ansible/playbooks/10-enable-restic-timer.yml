@@ -1,0 +1,14 @@
+- name: Enable Restic backup timer
+  hosts: homelab
+  become: true
+
+  tasks:
+    - name: Reload systemd
+      ansible.builtin.systemd:
+        daemon_reload: true
+
+    - name: Enable and start Restic backup timer
+      ansible.builtin.systemd:
+        name: restic-backup.timer
+        enabled: true
+        state: started
