@@ -1,0 +1,12 @@
+- name: Install backup tools
+  hosts: homelab
+  become: true
+
+  tasks:
+    - name: Install Restic and rclone
+      ansible.builtin.apt:
+        name:
+          - restic
+          - rclone
+        state: present
+        update_cache: true
