@@ -85,23 +85,26 @@ Aktualny etap: dokumentowanie środowiska i konfiguracja usług kontenerowych.
 - ✅ Skrypt backupowy
 - ✅ Automatyzacja przez systemd timer
 
-### Etap 6: Automatyzacja z Ansible  
+### Etap 6: Automatyzacja z Ansible i odtworzenie środowiska
   
-- ⏳ Przygotowanie struktury katalogów Ansible  
-- ⏳ Przygotowanie inventory dla Raspberry Pi  
-- ⏳ Test połączenia z Raspberry Pi przez Ansible  
-- ⏳ Instalacja podstawowych pakietów  
-- ⏳ Instalacja Dockera i Docker Compose  
-- ⏳ Tworzenie katalogu `docker`  
-- ⏳ Tworzenie katalogu `docker/data`  
-- ⏳ Tworzenie katalogów dla stacków Docker Compose  
-- ⏳ Kopiowanie plików `compose.yaml`
-- ⏳ Kopiowanie konfiguracji Prometheusa  
-- ⏳ Ustawianie uprawnień katalogów aplikacji  
-- ⏳ Instalacja Restic i rclone  
-- ⏳ Kopiowanie skryptu backupowego  
-- ⏳ Kopiowanie plików systemd service/timer  
-- ⏳ Włączenie systemd timer przez Ansible  
+- ✅ Przygotowanie struktury katalogów Ansible  
+- ✅ Przygotowanie inventory Ansible  
+- ✅ Test połączenia z Raspberry Pi  
+- ✅ Ponowne dodanie klucza SSH po reinstalacji Raspberry Pi
+- ✅ Instalacja podstawowych pakietów przez Ansible  
+- ✅ Instalacja Dockera i Docker Compose przez Ansible  
+- ✅ Tworzenie katalogów `docker` i `docker/data`  
+- ✅ Tworzenie katalogów dla stacków Docker Compose  
+- ✅ Kopiowanie plików `compose.yaml`  
+- ✅ Kopiowanie konfiguracji Prometheusa  
+- ✅ Ustawianie wybranych uprawnień katalogów usług  
+- ✅ Instalacja Restic i rclone przez Ansible  
+- ✅ Ręczne odtwarzanie sekretów backupu
+- ✅ Kopiowanie skryptu backupowego  
+- ✅ Kopiowanie plików systemd service/timer  
+- ✅ Ręczna konfiguracja tailscale
+- ✅ Włączenie systemd timer dla backupu  
+- ✅ Test pełnego odtworzenia po reinstalacji Raspberry Pi
   
 ## Dlaczego Raspberry Pi 5?  
 
@@ -186,7 +189,8 @@ Szczegółowa dokumentacja będzie rozwijana etapami w katalogu [docs/](docs/).
 - [Monitoring metryk: Prometheus i Grafana](docs/07-prometheus-grafana.md)
 - [Monitoring dostępności: Uptime Kuma](docs/08-uptime-kuma.md)
 - [backup i odtwarzanie](docs/09-restic-backup.md)
-- Automatyzacja z Ansible
+- [Automatyzacja z Ansible](docs/10-ansible-automation.md)
+- [Odtwarzanie środowiska po reinstalacji Raspberry Pi](docs/11-restore-after-reinstall.md)
 
 ## Pliki Docker Compose
 
@@ -213,14 +217,3 @@ docker/
 └── uptime-kuma/
     └── compose.yaml
 ```
-
-## Bezpieczeństwo
-
-W projekcie stosuję kilka podstawowych zasad:
-
-- usługi administracyjne nie są wystawiane bezpośrednio do internetu,
-- dostęp zdalny działa przez Tailscale VPN,
-- sekrety nie są przechowywane w repozytorium,
-- panele administracyjne są dostępne tylko z sieci lokalnej lub VPN,
-- dostęp do Docker socket powinien być ograniczony,
-- hasła powinny być silne i unikalne.
