@@ -1,0 +1,36 @@
+- name: Copy backup files
+  hosts: homelab
+  become: true
+
+  tasks:
+    - name: Create backup scripts directory
+      ansible.builtin.file:
+        path: "{{ backup_scripts_path }}"
+        state: directory
+        owner: root
+        group: root
+        mode: "0750"
+
+    - name: Copy backup script
+      ansible.builtin.copy:
+        src: "{{ backup_script_src }}"
+        dest: "{{ backup_script_dest }}"
+        owner: root
+        group: root
+        mode: "0750"
+
+    - name: Copy systemd service
+      ansible.builtin.copy:
+        src: "{{ backup_service_src }}"
+        dest: "{{ backup_service_dest }}"
+        owner: root
+        group: root
+        mode: "0644"
+
+    - name: Copy systemd timer
+      ansible.builtin.copy:
+        src: "{{ backup_timer_src }}"
+        dest: "{{ backup_timer_dest }}"
+        owner: root
+        group: root
+        mode: "0644"
