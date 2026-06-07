@@ -1,0 +1,6 @@
+- name: Test connection to Raspberry Pi
+  hosts: homelab
+
+  tasks:
+    - name: Ping host
+      ansible.builtin.ping:
