@@ -1,0 +1,25 @@
+- name: Install Docker and Docker Compose plugin
+  hosts: homelab
+  become: true
+
+  tasks:
+    - name: Install Docker packages
+      ansible.builtin.apt:
+        name:
+          - docker.io
+          - docker-cli
+          - docker-compose-plugin
+        state: present
+        update_cache: true
+
+    - name: Enable and start Docker service
+      ansible.builtin.systemd:
+        name: docker
+        enabled: true
+        state: started
+
+    - name: Add Ansible user to docker group
+      ansible.builtin.user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: true
